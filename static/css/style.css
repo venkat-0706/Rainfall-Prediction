@@ -1,0 +1,59 @@
+body {
+    background: #f4f6f9;
+    font-family: 'Inter', sans-serif;
+}
+
+.main-container {
+    margin-top: 40px;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 15px;
+}
+
+.form-grid input,
+.form-grid select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: 0.2s ease;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.result-card {
+    margin-top: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: 0.4s ease;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+}
+
+.result-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+canvas {
+    max-width: 250px;
+    margin: 20px auto;
+}

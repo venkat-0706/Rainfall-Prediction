@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="app-wrapper">
+
+<h2 class="title text-center">Live Rainfall Prediction</h2>
+
+<form id="predictionForm" class="form-grid">
+
+<input name="Location" placeholder="Location">
+<input name="MinTemp" type="number" placeholder="Min Temp">
+<input name="MaxTemp" type="number" placeholder="Max Temp">
+<input name="Rainfall" type="number" placeholder="Rainfall">
+<input name="WindGustSpeed" type="number" placeholder="Wind Gust Speed">
+<input name="WindSpeed9am" type="number" placeholder="Wind Speed 9am">
+<input name="WindSpeed3pm" type="number" placeholder="Wind Speed 3pm">
+<input name="Humidity9am" type="number" placeholder="Humidity 9am">
+<input name="Humidity3pm" type="number" placeholder="Humidity 3pm">
+<input name="Pressure9am" type="number" placeholder="Pressure 9am">
+<input name="Pressure3pm" type="number" placeholder="Pressure 3pm">
+<input name="Temp9am" type="number" placeholder="Temp 9am">
+<input name="Temp3pm" type="number" placeholder="Temp 3pm">
+<input name="Month" type="number" placeholder="Month (1-12)">
+
+<select name="RainToday">
+<option value="">Rain Today?</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select>
+
+<select name="WindGustDir">
+<option value="">Wind Gust Direction</option>
+<option value="N">N</option>
+<option value="S">S</option>
+<option value="E">E</option>
+<option value="W">W</option>
+</select>
+
+<select name="WindDir9am">
+<option value="">Wind Direction 9am</option>
+<option value="N">N</option>
+<option value="S">S</option>
+<option value="E">E</option>
+<option value="W">W</option>
+</select>
+
+<select name="WindDir3pm">
+<option value="">Wind Direction 3pm</option>
+<option value="N">N</option>
+<option value="S">S</option>
+<option value="E">E</option>
+<option value="W">W</option>
+</select>
+
+</form>
+
+<div id="resultCard" class="result-card hidden">
+    <canvas id="gaugeChart"></canvas>
+    <h3 id="resultText"></h3>
+    <p id="confidenceText"></p>
+</div>
+
+</div>
+
+{% endblock %}
